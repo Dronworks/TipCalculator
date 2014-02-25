@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.dron601.tipcalculator;
+package il.ac.huji.tipcalculator;
 
 public final class R {
     public static final class attr {

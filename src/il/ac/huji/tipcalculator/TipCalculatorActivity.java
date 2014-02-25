@@ -1,22 +1,18 @@
-package com.dron601.tipcalculator;
+package il.ac.huji.tipcalculator;
 
 
 
-import com.dron601.tipcalculator.R;
+import il.ac.huji.tipcalculator.R;
 
 import android.os.Bundle;
-import android.os.storage.OnObbStateChangeListener;
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
