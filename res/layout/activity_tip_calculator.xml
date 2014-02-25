@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myRelLay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:layout_margin="10dp">
+    
+	<TextView 
+        android:id="@+id/hello"	
+        android:textSize="30sp"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:background="#80606060"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="@string/prog_title"
+        android:textColor="#006699"/>     
+    
+	 <View
+        android:id="@+id/spaceZero"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" 
+        android:layout_below="@id/hello"/>
+	
+    <TextView
+        android:id="@+id/tableCheckReq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/spaceZero"
+        android:textStyle="bold"
+        android:text="@string/bill_amount_string"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edtBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:layout_toRightOf="@id/tableCheckReq"
+        android:layout_below="@id/spaceZero"
+        android:inputType="numberDecimal"
+        android:textAllCaps="true" />
+
+    <View
+        android:id="@+id/spaceOne"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/edtBillAmount" />
+
+    <CheckBox
+        android:id="@+id/chkRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spaceOne"
+        android:textStyle="italic"
+        android:text="@string/round_text"
+        android:checked="true"
+        />
+    
+    <View
+        android:id="@+id/spaceOneDotFive"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/chkRound" />
+    
+    <TextView
+        android:id="@+id/tipSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spaceOneDotFive"
+        android:layout_marginTop="12dp"
+        android:textStyle="italic"
+        android:text="@string/tip_request" />
+
+    <EditText
+        android:id="@+id/tipPercentField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tipSize"
+        android:layout_below="@id/spaceOneDotFive"
+        android:ems="4"
+        android:maxLength="4"
+        android:inputType="numberDecimal"
+        android:text="@string/tip_default" />
+    
+    <TextView
+        android:id="@+id/percentSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tipPercentField"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/spaceOneDotFive"
+        android:text="@string/percent" />
+
+    <View
+        android:id="@+id/spaceTwo"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/tipPercentField" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spaceTwo"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:text="@string/calculate" />
+
+    <View
+        android:id="@+id/spaceThree"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/btnCalculate" />
+
+    <TextView
+        android:id="@+id/txtTipResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spaceThree"
+        android:textColor="#300000"
+        android:textSize="20sp"
+        android:text="@string/tip_result" />
+    
+    
+    <TextView
+        android:id="@+id/totalCostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTipResult"
+        android:textColor="#300000"
+        android:textSize="20sp"
+        android:text="@string/total_result" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spaceOneDotFive"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
